@@ -1,0 +1,69 @@
+.header {
+  padding: 10px;
+  text-align: right;
+  font-size: 1.2rem;
+  color: white;
+  background-color: black;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 2fr 8fr;
+
+}
+
+.sidebar {
+  background-color: rgb(255, 255, 255);
+}
+
+.profile-avatar {
+  border-radius: 50%;
+}
+
+.profile-box {
+  padding: 20px 10px 40px 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding-bottom: 30px;
+  border: 1px solid rgb(238, 238, 238);
+  border-width: 0 0 1px 0;
+}
+
+.banner {
+  padding-top: 30px;
+}
+
+.banner-title {
+  padding-bottom: 10px;
+  padding-left: 15px;
+
+}
+
+.banner-menu {
+  
+  :hover {
+    background-color: #ccc;
+
+  }
+}
+
+.banner-content {
+  padding: 10px 0px 10px 15px;
+}
+
+#active-menu {
+  color: white;
+  background-color: rgb(73,148,236);
+}
+
+.body {
+  background-color: rgb(241, 241, 241);
+}
+
+.footer {
+  background-color: rgb(241, 241, 241);
+}
+
+.w3-css-link {
+  color: black;
+}
