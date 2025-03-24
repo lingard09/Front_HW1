@@ -1,12 +1,21 @@
 .app {
   display: flex;
   flex-direction: column;
+  background-color: rgb(241, 241, 241);
+  font-family: "Raleway", sans-serif;
+  font-weight: 450;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 .header {
   position: fixed;
+  top: 0;
+  z-index: 999;
   width: 100%;
-  height: 10%;
   padding: 10px;
   text-align: right;
   font-size: 1.2rem;
@@ -14,19 +23,15 @@
   background-color: black;
 }
 
-.main {
-
-}
-
 .sidebar {
-  
   position: fixed;
-  width: 20%;
+  height: 100%;
+  width: 300px;
+  margin-top: 43px;
   background-color: rgb(255, 255, 255);
-
 }
 
-.profile-avatar {
+.profile-avatar, .comment-avatar {
   border-radius: 50%;
 }
 
@@ -39,6 +44,26 @@
   border-width: 0 0 1px 0;
 }
 
+.welcoming {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.welcoming span {
+  font-weight: 600;
+}
+
+.profile-btn-box {
+  padding-left: 30px;
+  padding-right: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.profile-btn i {
+  font-size: 0.8rem;
+}
+
 .banner {
   padding-top: 30px;
 }
@@ -46,7 +71,7 @@
 .banner-title {
   padding-bottom: 10px;
   padding-left: 15px;
-
+  font-size: 1.1rem;
 }
 
 .banner-menu {
@@ -59,6 +84,11 @@
 
 .banner-content {
   padding: 10px 0px 10px 15px;
+  font-size: 0.9rem;
+}
+
+.banner-content i {
+  margin-right: 10px;
 }
 
 #active-menu {
@@ -69,6 +99,11 @@
 .body-title {
   padding-left: 10px;
   padding-top: 15px;
+  font-weight: 600;
+}
+
+.body-title i {
+  margin-right: 5px;
 }
 
 .dashboard {
@@ -76,27 +111,241 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   padding-top: 10px;
   margin-bottom: 20px;
+  color: white;
 }
 
 .dash-icon {
   height: 100px;
   margin: 10px;
-  background-color: aqua;
+  padding: 10px;
 }
 
-.body {
-  width: ;
+#messages-box {
+  background-color: red;
+}
+
+#views-box {
+  background-color: blue;
+}
+
+#shares-box {
+  background-color: green;
+}
+
+#users-box {
+  background-color: orange;
+}
+
+.main-body {
+  margin-left: 300px;
+  margin-top: 43px;
   padding: 10px;
-  background-color: rgb(241, 241, 241);
 }
 
 .body-infos {
   padding-left: 10px;
   display: grid;
-  grid-template-columns: 2fr 5fr;
+  grid-template-columns: 5fr 9fr;
+  margin-bottom: 50px;
 }
+
+.body-info-content {
+
+}
+
+.body-feeds {
+  display: flex;
+  flex-direction: column;
+}
+
+.body-feed {
+  height: 35px;
+}
+
+.white-cell {
+  background-color: white;
+}
+
+.body-info-title {
+  margin-bottom: 20px;
+
+}
+
+.body-stats {
+  padding-left: 10px;
+  margin-bottom: 50px;
+}
+
+.body-stats-title {
+  margin-bottom: 20px;
+}
+
+.body-stat-graph {
+  height: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: rgb(158, 158, 158);
+}
+
+
+.body-stat-graph-active {
+  height: 30px;
+  text-align: center;
+  align-content: center;
+}
+
+#visitors-graph {
+  width: 25%;
+  color: white;
+  background-color: rgb(103, 173, 91);
+}
+
+#users-graph {
+  width: 50%;
+  background-color: rgb(241, 157, 56);
+}
+
+#bounce-graph {
+  width: 75%;
+  color: white;
+  background-color: rgb(225, 82, 65);
+
+}
+
+.body-countries {
+  padding-left: 10px;
+  margin-bottom: 50px;
+}
+
+.body-countries-title {
+  margin-bottom: 10px;
+}
+
+.body-countries-table {
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid rgb(204, 204, 204);
+  border-collapse: collapse;
+}
+
+.body-country {
+  border: 1px solid rgb(204, 204, 204);
+  border-collapse: collapse;
+}
+
+td {
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.more-countries-btn {
+  padding: 10px;
+  border: none;
+  color: white;
+  background-color: rgb(97, 97, 97);
+}
+
+.recent-users {
+  padding-left: 15px;
+  margin-bottom: 50px;
+}
+
+.recent-users-title {
+  margin-bottom: 10px;
+}
+
+.recent-users-table {
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid rgb(204, 204, 204);
+  border-collapse: collapse;
+}
+
+.recent-user {
+  border: 1px solid rgb(204, 204, 204);
+  border-collapse: collapse;
+}
+
+.recent-user-name {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.recent-comments {
+  padding-left: 15px;
+  margin-bottom: 50px;
+}
+
+.recent-comments-title {
+  margin-bottom: 10px;
+}
+
+.recent-comment-content {
+  align-self: center;
+}
+
+.recent-comment {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  margin-bottom: 20px;
+}
+
+.comment-content-header {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.comment-author-name {
+  margin-right: 5px;
+  font-size: 1.2rem;
+}
+
+.comment-write-time {
+  align-self: center;
+  font-size: 0.8rem;
+}
+
+.comment-content-body {
+  font-size: 0.8rem
+}
+
+.body-details {
+  padding: 30px;
+  padding-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  color: white;
+  background-color: rgb(97, 97, 97);
+}
+
+.details-content {
+  margin: 10px;
+}
+
+.details-content-colorbar {
+  width: 100%;
+  height: 5%;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+#green-bar {
+  background-color: green;
+}
+
+#red-bar {
+  background-color: red;
+}
+
+#orange-bar {
+  background-color: orange;
+}
+
 .footer {
-  padding: 15px;
+  padding: 10px;
   background-color: rgb(241, 241, 241);
 }
 
