@@ -1,5 +1,11 @@
+import { Col } from 'react-bootstrap';
 import './App.css';
-import avatar from './assets/avatar1.png';
+import avatar1 from './assets/avatar1.png';
+import avatar2 from './assets/avatar2.png';
+import avatar3 from './assets/avatar3.png';
+import avatar5 from './assets/avatar5.png';
+import avatar6 from './assets/avatar6.png';
+
 import region from './assets/region.jpg';
 
 function App() {
@@ -13,7 +19,7 @@ function App() {
           <div className='profile-box'>
             <div className='profile-left-box'>
               <div className='profile-avatar-box'>
-                <img className='profile-avatar' src={avatar} width={45}/>
+                <img className='profile-avatar' src={avatar2} width={45}/>
               </div>
 
             </div>
@@ -70,8 +76,47 @@ function App() {
                   </div>
                 </a>
               </div>
+              <div className='banner-menu'>
+                <a href='htm#'>
+                  <div className='banner-content'>
+                    <i class="fa fa-diamond"></i>
+                    Orders
+                  </div>
+                </a>
+              </div>
+              <div className='banner-menu'>
+                <a href='htm#'>
+                  <div className='banner-content'>
+                    <i class="fa fa-bell"></i>
+                    News
+                  </div>
+                </a>
+              </div>
+              <div className='banner-menu'>
+                <a href='htm#'>
+                  <div className='banner-content'>
+                    <i class="fa fa-bank"></i>
+                    General
+                  </div>
+                </a>
+              </div>
+              <div className='banner-menu'>
+                <a href='htm#'>
+                  <div className='banner-content'>
+                    <i class="fa fa-history"></i>
+                    History
+                  </div>
+                </a>
+              </div>
             </div>
-
+            <div className='banner-menu'>
+                <a href='htm#'>
+                  <div className='banner-content'>
+                    <i class="fa fa-cog"></i>
+                    Settings
+                  </div>
+                </a>
+              </div>
           </div>
         </div>
         <div className='main-body'>
@@ -113,25 +158,39 @@ function App() {
               <div className='body-info-content'>
                 <div className='body-feeds'>
                   <div className='body-feed white-cell'>
-1
+                    <i className='fa fa-user' style={{color: 'rgb(32,148,239)'}}></i>
+                    <span>New record, over 90 views.</span>
+                    <em>10 mins</em>                  
                   </div>
                   <div className='body-feed'>
-                    2
+                    <i className='fa fa-bell' style={{color: 'rgb(244,67,54)'}}></i>
+                    <span>Database error.</span>
+                    <em>15 mins</em>
                   </div>
                   <div className='body-feed white-cell'>
-                    3
+                    <i className='fa fa-users' style={{color: 'rgb(210,190,14)'}}></i>
+                    <span>New record, over 40 users.</span>
+                    <em>17 mins</em>
                   </div>
                   <div className='body-feed'>
-4
+                    <i className='fa fa-comment' style={{color: 'rgb(244,67,54)'}}></i>
+                    <span>New comments.</span>
+                    <em>25 mins</em>
                   </div>
                   <div className='body-feed white-cell'>
-5
+                    <i className='fa fa-bookmark' style={{color: 'rgb(32,148,239)'}}></i>
+                    <span>Check transactions.</span>
+                    <em>28 mins</em>
                   </div>
                   <div className='body-feed'>
-                    6
+                    <i className='fa fa-laptop' style={{color: 'rgb(244,80,67)'}}></i>
+                    <span>CPU overload.</span>
+                    <em>35 mins</em>
                   </div>
                   <div className='body-feed white-cell'>
-                    7
+                    <i className='fa fa-share-alt' style={{color: 'rgb(75,173,79)'}}></i>
+                    <span>New shares.</span>
+                    <em>39 mins</em>
                   </div>
                 </div>
               </div>         
@@ -208,12 +267,15 @@ function App() {
             </div>
             <table className='recent-users-table'>
               <tr className='recent-user'>
+                <img className='profile-avatar' src={avatar2} width={45}/>
                 <td className='recent-user-name'>Mike</td>
               </tr>
               <tr className='recent-user'>
+                <img className='profile-avatar' src={avatar5} width={45}/>
                 <td className='recent-user-name'>Jill</td>
               </tr>
               <tr className='recent-user'>
+                <img className='profile-avatar' src={avatar6} width={45}/>
                 <td className='recent-user-name'>Jane</td>
               </tr>
             </table>
@@ -224,7 +286,7 @@ function App() {
             </div>
             <div className='recent-comment'>
               <div className='comment-avatar-box'>
-                <img className='comment-avatar' src={avatar} width='40%' />
+                <img className='comment-avatar' src={avatar3} width='40%' />
               </div>
               <div className='recent-comment-content'>
                 <div className='comment-content-header'>
@@ -242,7 +304,7 @@ function App() {
             </div>
             <div className='recent-comment'>
               <div className='comment-avatar-box'>
-                <img className='comment-avatar' src={avatar} width='40%' />
+                <img className='comment-avatar' src={avatar1} width='40%' />
               </div>
               <div className='recent-comment-content'>
                 <div className='comment-content-header'>

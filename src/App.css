@@ -120,12 +120,16 @@ a {
   padding: 10px;
 }
 
+.dash-icon i {
+  font-size: 3rem;
+}
+
 #messages-box {
   background-color: red;
 }
 
 #views-box {
-  background-color: blue;
+  background-color: rgb(32,148,239);
 }
 
 #shares-box {
@@ -149,17 +153,25 @@ a {
   margin-bottom: 50px;
 }
 
-.body-info-content {
-
-}
-
 .body-feeds {
   display: flex;
   flex-direction: column;
 }
 
 .body-feed {
-  height: 35px;
+  height: 25px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+}
+
+.body-feed i {
+  width: 100px;
+}
+
+.body-feed span {
+  display: inline-block;
+  width: 700px;
 }
 
 .white-cell {
