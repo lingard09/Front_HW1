@@ -1,124 +1,25 @@
-import { Col } from 'react-bootstrap';
 import './App.css';
 import avatar1 from './assets/avatar1.png';
 import avatar2 from './assets/avatar2.png';
 import avatar3 from './assets/avatar3.png';
 import avatar5 from './assets/avatar5.png';
 import avatar6 from './assets/avatar6.png';
-
 import region from './assets/region.jpg';
+
+import Sidebar from './Sidebar';
+
+function toggleSidebar() {
+  document.querySelector(".sidebar").classList.toggle("active");
+}
 
 function App() {
   return (
     <div className='app'>
       <div className='header'>
-        Logo
+        <span>Logo</span>
       </div>
       <div className='main'>
-        <div className='sidebar'>
-          <div className='profile-box'>
-            <div className='profile-left-box'>
-              <div className='profile-avatar-box'>
-                <img className='profile-avatar' src={avatar2} width={45}/>
-              </div>
-
-            </div>
-            <div className='profile-right-box'>
-              <div className='welcoming'> welcome, <span>Mike</span></div>
-              <div className='profile-btn-box'>
-                <div className='profile-btn'>
-                  <i className='fa fa-envelope'></i>
-                </div>
-                <div className='profile-btn'>
-                  <i className='fa fa-user'></i>
-                </div>
-                <div className='profile-btn'>
-                  <i className='fa fa-cog'></i>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <div className='banner'>
-            <div className='banner-title'>
-              Dashboard
-            </div>
-            <div className='banner-menus'>
-              <div className='banner-menu' id='active-menu'>
-                <a href='htm#'>
-                  <div className='banner-content'>
-                  <i class="fa-solid fa-users"></i>
-                  Overview
-                  </div>
-                </a>
-              </div>
-              <div className='banner-menu'>
-                <a href='htm#'>
-                  <div className='banner-content'>
-                    <i class="fa-solid fa-eye"></i>
-                    Views
-                  </div>          
-                </a>    
-              </div>
-              <div className='banner-menu'>
-                <a href='htm#'>
-                  <div className='banner-content'>
-                    <i class="fa-solid fa-users"></i>
-                    Traffic
-                  </div>
-                </a>
-              </div>
-              <div className='banner-menu'>
-                <a href='htm#'>
-                  <div className='banner-content'>
-                    <i class="fa fa-bullseye"></i>
-                    Geo
-                  </div>
-                </a>
-              </div>
-              <div className='banner-menu'>
-                <a href='htm#'>
-                  <div className='banner-content'>
-                    <i class="fa fa-diamond"></i>
-                    Orders
-                  </div>
-                </a>
-              </div>
-              <div className='banner-menu'>
-                <a href='htm#'>
-                  <div className='banner-content'>
-                    <i class="fa fa-bell"></i>
-                    News
-                  </div>
-                </a>
-              </div>
-              <div className='banner-menu'>
-                <a href='htm#'>
-                  <div className='banner-content'>
-                    <i class="fa fa-bank"></i>
-                    General
-                  </div>
-                </a>
-              </div>
-              <div className='banner-menu'>
-                <a href='htm#'>
-                  <div className='banner-content'>
-                    <i class="fa fa-history"></i>
-                    History
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div className='banner-menu'>
-                <a href='htm#'>
-                  <div className='banner-content'>
-                    <i class="fa fa-cog"></i>
-                    Settings
-                  </div>
-                </a>
-              </div>
-          </div>
-        </div>
+        <Sidebar />
         <div className='main-body'>
           <div className='body-title'>
             <i class="fa fa-dashboard"></i>
@@ -126,24 +27,24 @@ function App() {
           </div>
           <div className='dashboard'>
             <div className='dash-icon' id='messages-box'>
-              <i class="fa-solid fa-comment"></i>              
-              Messages
+              <span style={{paddingBottom: '14px'}}><i class="fa-solid fa-comment"></i><span style={{fontSize: '1.5rem'}}>52</span></span>
+              <span style={{fontSize: '1.3rem'}}>Messages</span>
             </div>
             <div className='dash-icon' id='views-box'>
-              <i class="fa-solid fa-eye"></i>
-              Views
+              <span style={{paddingBottom: '14px'}}><i class="fa-solid fa-eye"></i><span style={{fontSize: '1.5rem'}}>99</span></span>
+              <span style={{fontSize: '1.3rem'}}>Views</span>
             </div>
             <div className='dash-icon' id='shares-box'>
-              <i class="fa-solid fa-share-nodes"></i>
-              Shares
+              <span style={{paddingBottom: '14px'}}><i class="fa-solid fa-share-alt"></i><span style={{fontSize: '1.5rem'}}>23</span></span>
+              <span style={{fontSize: '1.3rem'}}>Shares</span>
             </div>
             <div className='dash-icon' id='users-box'>
-              <i class="fa-solid fa-users"></i>
-              Users
+              <span style={{paddingBottom: '14px'}}><i class="fa-solid fa-users"></i><span style={{fontSize: '1.5rem'}}>50</span></span>
+              <span style={{fontSize: '1.3rem'}}>Users</span>
             </div>
           </div>
           <div className='body-infos'>
-            <div className='body-info'>
+            <div className='body-info' id='regions-box'>
               <div className='body-info-title'>
                 Regions
               </div>
@@ -155,13 +56,13 @@ function App() {
               <div className='body-info-title'>
                 Feeds
               </div>   
-              <div className='body-info-content'>
-                <div className='body-feeds'>
-                  <div className='body-feed white-cell'>
-                    <i className='fa fa-user' style={{color: 'rgb(32,148,239)'}}></i>
-                    <span>New record, over 90 views.</span>
-                    <em>10 mins</em>                  
-                  </div>
+              <table className='body-info-content'>
+                <tbody className='body-feeds'>
+                  <tr className='body-feed white-cell'>
+                    <td><i className='fa fa-user' style={{color: 'rgb(32,148,239)'}}></i></td>
+                    <td><span>New record, over 90 views.</span></td>
+                    <td><em>10 mins</em></td>               
+                  </tr>
                   <div className='body-feed'>
                     <i className='fa fa-bell' style={{color: 'rgb(244,67,54)'}}></i>
                     <span>Database error.</span>
@@ -192,8 +93,8 @@ function App() {
                     <span>New shares.</span>
                     <em>39 mins</em>
                   </div>
-                </div>
-              </div>         
+                </tbody>
+              </table>         
             </div>
           </div>
           <div className='body-stats'>
@@ -258,7 +159,7 @@ function App() {
               </tr>
             </table>
             <button className='more-countries-btn'>
-              More Countries
+              More Countries <i class="fa fa-arrow-right"></i>
             </button>
           </div>
           <div className='recent-users'>
@@ -286,7 +187,7 @@ function App() {
             </div>
             <div className='recent-comment'>
               <div className='comment-avatar-box'>
-                <img className='comment-avatar' src={avatar3} width='40%' />
+                <img className='comment-avatar' src={avatar3} width='100px' />
               </div>
               <div className='recent-comment-content'>
                 <div className='comment-content-header'>
@@ -304,7 +205,7 @@ function App() {
             </div>
             <div className='recent-comment'>
               <div className='comment-avatar-box'>
-                <img className='comment-avatar' src={avatar1} width='40%' />
+                <img className='comment-avatar' src={avatar1} width='100px' />
               </div>
               <div className='recent-comment-content'>
                 <div className='comment-content-header'>

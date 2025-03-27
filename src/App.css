@@ -17,10 +17,15 @@ a {
   z-index: 999;
   width: 100%;
   padding: 10px;
-  text-align: right;
   font-size: 1.2rem;
   color: white;
   background-color: black;
+}
+
+.header span {
+  padding-right: 30px;
+  width: auto;
+  float: right;
 }
 
 .sidebar {
@@ -45,7 +50,7 @@ a {
 }
 
 .welcoming {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-size: 0.9rem;
 }
 
@@ -54,7 +59,6 @@ a {
 }
 
 .profile-btn-box {
-  padding-left: 30px;
   padding-right: 30px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -62,6 +66,14 @@ a {
 
 .profile-btn i {
   font-size: 0.8rem;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(204, 204, 204);
+  }
 }
 
 .banner {
@@ -98,8 +110,9 @@ a {
 
 .body-title {
   padding-left: 10px;
-  padding-top: 15px;
+  padding-top: 25px;
   font-weight: 600;
+  font-size: 1.1rem;
 }
 
 .body-title i {
@@ -109,19 +122,23 @@ a {
 .dashboard {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  padding-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   color: white;
 }
 
 .dash-icon {
-  height: 100px;
+  display: flex;
+  flex-direction: column;
+  height: 80%;
   margin: 10px;
-  padding: 10px;
+  padding: 20px;
+  padding-bottom: 10px;
 }
+
 
 .dash-icon i {
   font-size: 3rem;
+  padding-right: 60%;
 }
 
 #messages-box {
@@ -153,25 +170,20 @@ a {
   margin-bottom: 50px;
 }
 
-.body-feeds {
-  display: flex;
-  flex-direction: column;
-}
-
 .body-feed {
+  display: grid;
+  grid-template-columns: 1fr 10fr 2fr;
+  width: 100%;
   height: 25px;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 10px;
+
 }
 
-.body-feed i {
-  width: 100px;
-}
 
 .body-feed span {
   display: inline-block;
-  width: 700px;
 }
 
 .white-cell {
@@ -180,7 +192,12 @@ a {
 
 .body-info-title {
   margin-bottom: 20px;
+  font-size: 1.2rem;
+}
 
+.body-info-content {
+  width: 97%;
+  border-collapse: collapse;
 }
 
 .body-stats {
@@ -190,6 +207,7 @@ a {
 
 .body-stats-title {
   margin-bottom: 20px;
+  font-size: 1.2rem;
 }
 
 .body-stat-graph {
@@ -230,6 +248,7 @@ a {
 }
 
 .body-countries-title {
+  font-size: 1.2rem;
   margin-bottom: 10px;
 }
 
@@ -243,12 +262,18 @@ a {
 .body-country {
   border: 1px solid rgb(204, 204, 204);
   border-collapse: collapse;
+  padding: 5px;
 }
 
-td {
+.body-country td {
+  width: 100%;
   padding-left: 15px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.body-countries-table td:hover {
+  background-color: rgb(204, 204, 204);
 }
 
 .more-countries-btn {
@@ -256,6 +281,13 @@ td {
   border: none;
   color: white;
   background-color: rgb(97, 97, 97);
+  font-size: 1rem;
+
+  &:hover {
+    cursor: pointer;
+    color: black;
+    background-color: rgb(204, 204, 204);
+  }
 }
 
 .recent-users {
@@ -265,6 +297,7 @@ td {
 
 .recent-users-title {
   margin-bottom: 10px;
+  font-size: 1.2rem;
 }
 
 .recent-users-table {
@@ -272,9 +305,14 @@ td {
   margin-bottom: 20px;
   border: 1px solid rgb(204, 204, 204);
   border-collapse: collapse;
+  background-color: white;
+  box-shadow: 5px 5px 10px 10px lightgray;
 }
 
 .recent-user {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
   border: 1px solid rgb(204, 204, 204);
   border-collapse: collapse;
 }
@@ -291,7 +329,8 @@ td {
 }
 
 .recent-comments-title {
-  margin-bottom: 10px;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
 }
 
 .recent-comment-content {
@@ -337,15 +376,19 @@ td {
   margin: 10px;
 }
 
+.details-content-title {
+  font-size: 1.2rem;
+}
+
 .details-content-colorbar {
   width: 100%;
-  height: 5%;
+  height: 5px;
   margin-top: 5px;
   margin-bottom: 10px;
 }
 
 #green-bar {
-  background-color: green;
+  background-color: rgb(76, 175, 80);
 }
 
 #red-bar {
@@ -356,11 +399,127 @@ td {
   background-color: orange;
 }
 
+.details-content-list {
+  margin-bottom: 20px;
+}
+
 .footer {
   padding: 10px;
   background-color: rgb(241, 241, 241);
 }
 
+.footer-title {
+  padding-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
 .w3-css-link {
   color: black;
+  text-decoration: underline;
+}
+
+
+
+@media (max-width: 1000px) {
+  .sidebar {
+    display: none;
+  }
+  .main-body {
+    margin-left: 0 !important;
+  }
+  .body-feed span {
+    width: 80%;
+  }
+  
+}
+
+
+@media (min-width: 1001px) {
+  .main-body {
+    margin-left: 300px;
+  }
+}
+
+@media (max-width: 700px) {
+  .app {
+    font-size: 80%;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .main-body {
+    margin-left: 0;
+  }
+
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .body-infos {
+    grid-template-columns: 1fr;
+  }
+
+  .body-stats-content {
+    flex-direction: column;
+  }
+
+  .recent-users-table,
+  .body-countries-table {
+    width: 100%;
+  }
+
+  .profile-box {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .profile-btn-box {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .banner-menus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .banner-menu {
+    width: 100%;
+    text-align: center;
+  }
+
+  .body-feed i{
+    width: 50px;
+  }
+
+  .body-feed span {
+    width: 60%;
+  }
+
+  .recent-comment {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .recent-comment-content {
+    padding-left: 20px;
+  }
+
+  .comment-avatar {
+    margin-bottom: 20px;
+  }
+
+  .body-details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #regions-box {
+    margin-bottom: 50px;
+  }
 }
